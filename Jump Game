@@ -1,1 +1,19 @@
 #跳跃游戏
+模拟走法很像BFS广度优先搜索，不是完全的BFS，可以用nums中的每一个value去跑一个nums.size的loop，这样算出来是On2
+或者是一个班接力跳远的问题
+小明有能力跳nums[i]步，所有在他后面的nums[i]个同学都能拿到接力棒，他很想直接发挥全力，直接给i+nums[i]的那个同学，但是他知道i~i+nums[i]中间不泛有比
+他厉害得多的人，所有为了班级最后的荣誉，他只能走一步，这样的话最终的复杂度是On
+
+看了答案之后，还有一种贪心倒推法：
+```java
+public class Solution {
+    public boolean canJump(int[] nums) {
+        int lastPos = nums.length - 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (i + nums[i] >= lastPos) {
+                lastPos = i;
+            }
+        }
+        return lastPos == 0;
+    }
+}
