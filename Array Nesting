@@ -1,5 +1,4 @@
-欢迎阅读 [择势勤](https://www.jianshu.com/u/16d77399d3a7 "择势勤")
-
+https://leetcode.com/problems/array-nesting/
 Solve
 数组中数字都是小于N，所以全部是自闭环，没有说不能改数组
 直接把走过的数组元素置为N，求环的长度即可，复杂度O(N),无需用多余的空间
