@@ -1,0 +1,59 @@
+数组遍历框架，典型的线性迭代结构：
+
+void transverse(vector<int>& test){
+    for (int i = 0 ; i < test.size() ; i ++){
+    
+    }
+}
+
+链表的遍历框架，典型的链式结构：
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x): val(x), nex(NULL) {}
+}
+
+void trans(ListNode *head){
+
+    while(head){
+        head = head->next;
+    }
+}
+
+
+二叉树遍历框架，典型的非线性递归遍历结构：
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+ 
+ struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x): val(x), left(NULL), right(NULL) {}
+ }
+ 
+ 
+ void tans(TreeNode *node){
+    trans(node->left);
+    trans(node->right);
+ }
+ 
+ 多叉树遍历
+ 
+struct MulTreeNode {
+    int val;
+    TreeNode *children[3];
+    TreeNode(int x): val(x){}
+}
+
+
+
